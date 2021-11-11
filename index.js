@@ -9,3 +9,8 @@ const player2Scoreboard = document.getElementById("player2Scoreboard");
 const message = document.getElementById("message");
 const rollButton = document.getElementById("rollBtn");
 const resetBtn = document.getElementById("resetBtn");
+
+rollButton.addEventListener('click', function() {
+    let result = Math.floor(Math.random() * 6) + 1;
+    console.log(result);
+})
