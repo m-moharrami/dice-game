@@ -15,13 +15,15 @@ rollButton.addEventListener('click', function() {
     console.log(result);
 
     if (player1Turn) {
-        player1Scoreboard.innerHTML = result;
+        player1Scoreboard.textContent = result;
         player1Dice.classList.remove("active");
         player2Dice.classList.add("active");
+        message.textContent = "Player 2 turn";
     } else {
-        player2Scoreboard.innerHTML = result;
+        player2Scoreboard.textContent = result;
         player2Dice.classList.remove("active");
         player1Dice.classList.add("active");
+        message.textContent = "Player 1 turn";
     }
     player1Turn = !player1Turn;
 })
