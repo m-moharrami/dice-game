@@ -15,9 +15,9 @@ rollButton.addEventListener('click', function() {
     console.log(result);
 
     if (player1Turn) {
-        console.log("Player 1 rolled " + result);
+        player1Scoreboard.innerHTML = result;
     } else {
-        console.log("Player 2 rolled " + result);
+        player2Scoreboard.innerHTML = result;
     }
     player1Turn = !player1Turn;
 })
