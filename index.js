@@ -16,8 +16,12 @@ rollButton.addEventListener('click', function() {
 
     if (player1Turn) {
         player1Scoreboard.innerHTML = result;
+        player1Dice.classList.remove("active");
+        player2Dice.classList.add("active");
     } else {
         player2Scoreboard.innerHTML = result;
+        player2Dice.classList.remove("active");
+        player1Dice.classList.add("active");
     }
     player1Turn = !player1Turn;
 })
