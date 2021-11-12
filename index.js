@@ -45,3 +45,22 @@ rollButton.addEventListener('click', function() {
 
     player1Turn = !player1Turn;
 })
+
+function reset() {
+    message.textContent = "Player 1 turn";
+    player1Turn = true;
+    player1Score = 0;
+    player2Score = 0;
+    player1Scoreboard.textContent = 0;
+    player2Scoreboard.textContent = 0;
+    player1Dice.textContent = "-";
+    player2Dice.textContent = "-";
+    resetButton.style.display = "none";
+    rollButton.style.display = "block";
+    player2Dice.classList.remove("active");
+    player1Dice.classList.add("active");
+}
+
+resetButton.addEventListener('click', function() {
+    reset();
+})
