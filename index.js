@@ -8,7 +8,7 @@ const player1Scoreboard = document.getElementById("player1Scoreboard");
 const player2Scoreboard = document.getElementById("player2Scoreboard");
 const message = document.getElementById("message");
 const rollButton = document.getElementById("rollBtn");
-const resetBtn = document.getElementById("resetBtn");
+const resetButton = document.getElementById("resetBtn");
 
 rollButton.addEventListener('click', function() {
     let result = Math.floor(Math.random() * 6) + 1;
@@ -29,5 +29,16 @@ rollButton.addEventListener('click', function() {
         player1Dice.classList.add("active");
         message.textContent = "Player 1 turn";
     }
+
+    if (player1Score >= 20) {
+        message.textContent = "Player 1 has won 🥳";
+        rollButton.style.display = "none";
+        resetButton.style.display = "block";
+    } else if (player2Score >= 20) {
+        message.textContent = "Player 2 has won 🥳";
+        rollButton.style.display = "none";
+        resetButton.style.display = "block";
+    }
+
     player1Turn = !player1Turn;
 })
